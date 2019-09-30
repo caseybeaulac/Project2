@@ -1,0 +1,2 @@
+var sequelize = require('sequelize');
+
