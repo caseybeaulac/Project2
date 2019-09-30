@@ -2,8 +2,9 @@ var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
+var userID = localStorage.getItem("userId")
+console.log(userID);
 
-//console.log(userID);
 
 var API = {
   saveExample: function (example) {
@@ -16,7 +17,7 @@ var API = {
       data: JSON.stringify(example)
     });
   },
-  getExamples: function () {
+  getId: function () {
     return $.ajax({
       url: "api/examples",
       type: "GET"

@@ -4,6 +4,8 @@ $(document).ready(function () {
   var modelInput = $("input#model-input");
   var conditionInput = $("select#condition-input");
   var imeiInput = $("input#imei-input");
+  var userID = localStorage.getItem("userId")
+  console.log(userID);
 
   $(".sign-up").click(function (event) {
     console.log("btn clicked")
@@ -11,14 +13,14 @@ $(document).ready(function () {
     var phoneData = {
       brand: brandInput.val().trim(),
       model: modelInput.val().trim(),
-      condition: conditionInput.val(),
+      phone_condition: conditionInput.val(),
       imei: imeiInput.val().trim()
     };
 
     if (
       !phoneData.brand ||
       !phoneData.model ||
-      !phoneData.condition ||
+      !phoneData.phone_condition ||
       !phoneData.imei
     ) {
       alert("Please fill in all the fields");
@@ -28,7 +30,7 @@ $(document).ready(function () {
     postPhone(
       phoneData.brand,
       phoneData.model,
-      phoneData.condition,
+      phoneData.phone_condition,
       phoneData.imei
     );
     brandInput.val(""),
@@ -37,12 +39,13 @@ $(document).ready(function () {
       imeiInput.val("");
   });
 
-  function postPhone(brand, model, condition, imei) {
+  function postPhone(brand, model, phone_condition, imei) {
     $.post("/api/post", {
       brand: brand,
       model: model,
-      condition: condition,
-      imei: imei
+      phone_condition: phone_condition,
+      imei: imei,
+      userID : userID
     })
 
 

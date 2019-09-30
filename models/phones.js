@@ -9,7 +9,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false
     },
-    condition: {
+    phone_condition: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -19,6 +19,10 @@ module.exports = function (sequelize, DataTypes) {
       // validate: {
       //   len: [15],      
       // }
+    },
+    userID:{
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
 
 
