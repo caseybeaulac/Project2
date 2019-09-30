@@ -4,6 +4,7 @@ $(document).ready(function () {
     var emailInput = $("input#email-input");
     var passwordInput = $("input#password-input");
     var userID;
+    console.log(`User ID ${userID}`)
 
     $(".see-more").click(function (event) {
         event.preventDefault();
@@ -50,7 +51,8 @@ function loginUser(email, password) {
     })
         .then(function (user) {
             console.log("user id " + user);
-            //userID = userData;
+            localStorage.setItem("userId", user)
+            userID = user;
             window.location.replace("/home"); //- shouldnt need this
             //insert get request for "/home" url
             // $.get("/home", function (req, res) {

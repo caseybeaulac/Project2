@@ -32,6 +32,8 @@ module.exports = function (app) {
     if (!req.user) {
       res.json({});
     } else {
+      console.log(res);
+
       res.json({
         email: req.user.email,
         id: req.user.id
@@ -44,11 +46,13 @@ module.exports = function (app) {
     // if (!userID) {
     //   alert("Please log in before posting a phone");
     // }
+   // console.log(db.Phone)
     db.Phone.create({
       brand: req.body.brand,
       model: req.body.model,
-      condition: req.body.condition,
-      imei: req.body.imei
+      phone_condition: req.body.phone_condition,
+      imei: req.body.imei,
+      userID: parseInt(req.body.user)
 
     })
       .then(function () {
@@ -60,6 +64,7 @@ module.exports = function (app) {
         // );
       })
       .catch(function (err) {
+        console.log(err)
         res.status(401).json(err);
       });
   });
