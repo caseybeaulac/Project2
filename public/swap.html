@@ -14,7 +14,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/post.js"></script>
+    <script type="text/javascript" src="js/swap.js"></script>
 
 </head>
 
@@ -25,69 +25,85 @@
         <div class="row">
             <div class="col-4">
                 <a href="index.html">
-                <img class="logo" src="assets/images/logo-03.svg" alt="Swappy Logo">
+                    <img class="logo" src="assets/images/logo-03.svg" alt="Swappy Logo">
                 </a>
             </div>
 
             <div class="col-8">
-                    <div class="btn user-icon">
-                      <a href="login.html"><img src="assets/images/user.svg" alt="User Icon"></a></div>
-                    <div class="btn phone-icon">
-                      <a href="categories.html"><img src="assets/images/phone.svg" alt="Phone Icon"></a></div>
-                      <form id="form" action="">
-                          <input type="search" id="input">
-                          <div class="lookup">
-                          <img class=" search-icon"src="assets/images/search.svg" alt="Search Icon">
-                          </div>
-                        </form>
-                  </div>
+                <div class="btn user-icon">
+                    <a href="login.html"><img src="assets/images/user.svg" alt="User Icon"></a></div>
+                <div class="btn phone-icon">
+                    <a href="categories.html"><img src="assets/images/phone.svg" alt="Phone Icon"></a></div>
+                <form id="form" action="">
+                    <input type="search" id="input">
+                    <div class="lookup">
+                        <img class=" search-icon" src="assets/images/search.svg" alt="Search Icon">
+                    </div>
+                </form>
+            </div>
 
         </div>
 
         <div class="row">
             <div class="col-6 contact-form" id="contact">
                 <h2>What phone would you like to post for a swap?</h2>
-                <form class="post">
 
-                    <label for="brand"></label>
-                    <input type="text" id="brand-input" placeholder="Brand">
-
-                    <label for="model"></label>
-                    <input type="text" id="model-input" placeholder="Model">
-
-                    <select id="condition-input">
-                        <option selected>Condition</option>
-                        <option value="pristine" href="#">Pristine</option>
-                        <option value="great" href="#">Great</option>
-                        <option value="good" href="#">Good</option>
-                        <option value="fair" href="#">Fair</option>
-                    </select>
-
-                    <label for="imei"></label>
-                    <input type="text" id="imei-input" placeholder="IMEI Number">
-
-                    <div class="row">
-                        <button class="btn sign-up">POST</button>
+                <form action="" method="POST" role="form">
+                    ​
+                    <div class="form-group">
+                        <label for="" id="brand-label"></label>
+                        <input placeholder="Brand" type="text" class="form-control" id="brand" placeholder="">
                     </div>
 
+                    <div class="form-group">
+                        <label for="" id="model-label"></label>
+                        <input placeholder="Model" type="text" class="form-control" id="model" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" id="condition-label"></label>
+                        <input placeholder="Condition" type="text" class="form-control" id="condition" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" id="imei-label"></label>
+                        <input placeholder="IMEI Number" type="text" class="form-control" id="imei-number" placeholder="">
+                    </div>
+                    ​
+                    <form action="/profile" method="POST" enctype="multipart/form-data">
+                        <div class="button-section">   
+                            <input type="file" name="avatar">
+                            <div class="fake-input">Choose File</div>
+                            <button id="upload-btn" type="submit" name="submit">UPLOAD</button>
+                        </div>
+                    </form>
+
                 </form>
+
+                <div class="text-right">
+                    <button type="submit" class="btn sign-up" id="add-btn">
+                        POST</button>
+                </div>
             </div>
 
             <div class="col-6" id="illustration">
                 <img src="assets/images/illustration.svg" alt="illustration.svg">
             </div>
-
-        </div>
-
-
-        <div class="footer">
-            <div class="center">
-                <a href="https://github.com/davimello" class="fa fa-facebook" target="_blank"></a>
-                <a href="https://dribbble.com/davicreative" class="fa fa-instagram" target="_blank"></a>
-                <a href="https://www.linkedin.com/in/daviavmello/" class="fa fa-pinterest" target="_blank"></a>
-                <p>&#169; 2019 Swapz. All Rights Reserved.</p>
+        
             </div>
         </div>
+
+    </div>
+
+
+    <div class="footer">
+        <div class="center">
+            <a href="https://github.com/davimello" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://dribbble.com/davicreative" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/daviavmello/" class="fa fa-pinterest" target="_blank"></a>
+            <p>&#169; 2019 Swapz. All Rights Reserved.</p>
+        </div>
+    </div>
     </div>
 
 
