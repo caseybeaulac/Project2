@@ -5,7 +5,7 @@ $(document).ready(function () {
   var passwordInput = $("input#password-input");
 
 
-  $(".sign-up").click(function (event) {
+  $(".add-user").click(function (event) {
     event.preventDefault();
     var userData = {
       email: emailInput.val().trim(),

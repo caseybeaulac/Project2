@@ -1,3 +1,6 @@
+var userID = localStorage.getItem("userId")
+console.log(userID);
+
 $(document).ready(function () {
   var postForm = $("form.post");
   var brandInput = $("input#brand-input");
