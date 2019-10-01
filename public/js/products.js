@@ -1,3 +1,4 @@
+<<<<<<< HEAD
             $("#add-btn").on("click", function(event) {
   event.preventDefault();
 ​
@@ -30,3 +31,9 @@ console.log(newButtons);
   $("#imei-number").val("");
 ​
 });
+=======
+var sequelize = require('sequelize');
+
+function getPhones
+
+>>>>>>> master

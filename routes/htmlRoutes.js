@@ -25,6 +25,11 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/swap.html"));
   });
 
+  app.get("/products", function (req, res) {
+    console.log("route hit")
+    res.sendFile(path.join(__dirname, "../public/products.html"));
+  });
+
   app.get("/signup", function (req, res) {
 
     // if (req.user) {
