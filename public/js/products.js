@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-            $("#add-btn").on("click", function(event) {
+$("#add-btn").on("click", function(event) {
   event.preventDefault();
 ​
   // make a newCharacter obj
@@ -31,9 +30,3 @@ console.log(newButtons);
   $("#imei-number").val("");
 ​
 });
-=======
-var sequelize = require('sequelize');
-
-function getPhones
-
->>>>>>> master
