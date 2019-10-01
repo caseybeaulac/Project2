@@ -46,7 +46,7 @@ module.exports = function (app) {
     // if (!userID) {
     //   alert("Please log in before posting a phone");
     // }
-   // console.log(db.Phone)
+    // console.log(db.Phone)
     db.Phone.create({
       brand: req.body.brand,
       model: req.body.model,
@@ -68,4 +68,18 @@ module.exports = function (app) {
         res.status(401).json(err);
       });
   });
+
+  app.get("/api/allPhones", function (req, res) {
+
+    console.log("all phones")
+    db.Phone.findAll({
+
+    })
+      .then(function (phoneData) {
+        res.json(phoneData)
+
+      })
+
+  })
+
 };
