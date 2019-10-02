@@ -3,14 +3,14 @@ console.log(userID);
 
 $(document).ready(function () {
   var postForm = $("form.post");
-  var brandInput = $("input#brand-input");
-  var modelInput = $("input#model-input");
-  var conditionInput = $("select#condition-input");
-  var imeiInput = $("input#imei-input");
+  var brandInput = $("input#brand");
+  var modelInput = $("input#model");
+  var conditionInput = $("select#condition-select");
+  var imeiInput = $("input#imei-number");
   var userID = localStorage.getItem("userId")
   console.log(userID);
 
-  $(".sign-up").click(function (event) {
+  $("#add-btn").click(function (event) {
     console.log("btn clicked")
     event.preventDefault();
     var phoneData = {
@@ -48,7 +48,7 @@ $(document).ready(function () {
       model: model,
       phone_condition: phone_condition,
       imei: imei,
-      userID : userID
+      userID: userID
     })
 
 

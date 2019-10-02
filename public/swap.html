@@ -15,6 +15,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/swap.js"></script>
+    <script type="text/javascript" src="js/post.js"></script>
 
 </head>
 
@@ -24,23 +25,23 @@
 
         <div class="row">
             <div class="col-4">
-                <a href="index.html">
+                <a href="/home">
                     <img class="logo" src="assets/images/logo-03.svg" alt="Swappy Logo">
                 </a>
             </div>
 
             <div class="col-8">
-                    <div class="btn user-icon">
-                      <a href="/login"><img src="assets/images/user.svg" alt="User Icon"></a></div>
-                    <div class="btn phone-icon">
-                      <a href="/products"><img src="assets/images/phone.svg" alt="Phone Icon"></a></div>
-                      <form id="form" action="">
-                          <input type="search" id="input">
-                          <div class="lookup">
-                          <img class=" search-icon"src="assets/images/search.svg" alt="Search Icon">
-                          </div>
-                        </form>
-                  </div>
+                <div class="btn user-icon">
+                    <a href="/login"><img src="assets/images/user.svg" alt="User Icon"></a></div>
+                <div class="btn phone-icon">
+                    <img id="seePhones2" src="assets/images/phone.svg" alt="Phone Icon"></div>
+                <form id="form" action="">
+                    <input type="search" id="input">
+                    <div class="lookup">
+                        <img class=" search-icon" src="assets/images/search.svg" alt="Search Icon">
+                    </div>
+                </form>
+            </div>
 
         </div>
 
@@ -48,7 +49,7 @@
             <div class="col-6 contact-form" id="contact">
                 <h2>What phone would you like to post for a swap?</h2>
 
-                <form action="" method="POST" role="form">
+                <form class="post" action="" method="POST" role="form">
                     ​
                     <div class="form-group">
                         <label for="" id="brand-label"></label>
@@ -61,17 +62,29 @@
                     </div>
 
                     <div class="form-group">
+                        <select id="condition-select">
+                            ​
+                            <option value>Condition</option>
+                            <option value="Pristine">Pristine</option>
+                            <option value="Great">Great</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            ​
+                        </select>
+                    </div>
+                    <!-- <div class="form-group">
                         <label for="" id="condition-label"></label>
                         <input placeholder="Condition" type="text" class="form-control" id="condition" placeholder="">
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                         <label for="" id="imei-label"></label>
-                        <input placeholder="IMEI Number" type="text" class="form-control" id="imei-number" placeholder="">
+                        <input placeholder="IMEI Number" type="text" class="form-control" id="imei-number"
+                            placeholder="">
                     </div>
                     ​
                     <form action="/profile" method="POST" enctype="multipart/form-data">
-                        <div class="button-section">   
+                        <div class="button-section">
                             <input type="file" name="avatar">
                             <div class="fake-input">Choose File</div>
                             <button id="upload-btn" type="submit" name="submit">UPLOAD</button>
@@ -89,18 +102,18 @@
             <div class="col-6" id="illustration">
                 <img src="assets/images/illustration.svg" alt="illustration.svg">
             </div>
-        
-            </div>
+
         </div>
+    </div>
 
     </div>
 
 
     <div class="footer">
         <div class="center">
-            <a href="https://github.com/davimello" class="fa fa-facebook" target="_blank"></a>
-            <a href="https://dribbble.com/davicreative" class="fa fa-instagram" target="_blank"></a>
-            <a href="https://www.linkedin.com/in/daviavmello/" class="fa fa-pinterest" target="_blank"></a>
+            <a href="" class="fa fa-facebook" target="_blank"></a>
+            <a href="" class="fa fa-instagram" target="_blank"></a>
+            <a href="" class="fa fa-pinterest" target="_blank"></a>
             <p>&#169; 2019 Swappy. All Rights Reserved.</p>
         </div>
     </div>

@@ -123,6 +123,34 @@ $("#seePhones").on("click", function (event) {
 
   })
 
+})
+
+  $("#seePhones2").on("click", function (event) {
+    event.preventDefault();
+    console.log("get all clicked");
+  
+    $.get("/api/allPhones", function (phoneData) {
+      console.log(phoneData);
+      $(".pageSwap2 .pageSwap2Content").empty();
+      phoneData.forEach(phone => {
+        var col = $("<div>").addClass("col-4 hovereffect")
+        var overlay = $("<div>").addClass("overlay")
+        var img = $("<img>").attr("src", "https://www.boostmobile.com/amp/img/lg-stylo-4/carousel/4.jpg").addClass("phone card-img-top img-responsive").attr("alt", `${phone.brand} ${phone.model}`)
+        var brand = $("<h3>").text(`${phone.brand} ${phone.model}`)
+        var cond = $("<h4>").text(`${phone.phone_condition}`).addClass("h4-product")
+        var btn = $("<button>").text("SWAP IT").addClass("btn see-more")
+        overlay.append(brand)
+        overlay.append(cond)
+        overlay.append(btn)
+        col.append(img)
+        col.append(overlay)
+        $(".pageSwap2 .pageSwap2Content").append(col)
+      });
+      $(".pageSwap1").hide();
+      $(".pageSwap2").show();
+  
+    })
+  
 
 })
 
