@@ -56,7 +56,7 @@ h4 {
   font-size: 18px;
 }
 
-.see-more, #upload-btn, button#seePhones.btn.see-phones, button.btn.signup {
+.see-more, #upload-btn, button#seePhones.btn.see-phones, button.btn.signup, button.btn.add-user {
   /* color: #EFEAD7; */
   color: #fff;
   letter-spacing: 1.5px;
@@ -101,7 +101,7 @@ input[type="file"] {
   color: #fff;
 }
 
-button.btn.see-more, button#seePhones.btn.see-phones, button.btn.signup {
+button.btn.see-more, button#seePhones.btn.see-phones, button.btn.signup, button.btn.add-user {
   margin-left: 15px;
   margin-top: 50px;
   margin-right: 10px;
@@ -112,7 +112,7 @@ button.btn.see-more, button#seePhones.btn.see-phones, button.btn.signup {
   padding: 10px 20px;
 }
 
-button.btn.see-more:hover, #upload-btn:hover, button#seePhones.btn.see-phones:hover, button.btn.signup:hover {
+button.btn.see-more:hover, #upload-btn:hover, button#seePhones.btn.see-phones:hover, button.btn.signup:hover, button.btn.add-user:hover {
   box-shadow: 0 2px 5px rgb(100, 100, 100);
   color: #ddd;
 }
